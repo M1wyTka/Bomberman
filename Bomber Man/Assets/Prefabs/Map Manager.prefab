@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &54589097901643450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54589097901643428}
+  - component: {fileID: 54589097901643429}
+  m_Layer: 0
+  m_Name: Map Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &54589097901643428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54589097901643450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &54589097901643429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54589097901643450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c55dbfa64a8b024f820151bef939318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTilemap: {fileID: 0}
+  wallTile: {fileID: 11400000, guid: 6880a2128170d3043861b4366415d7b6, type: 2}
+  destructibleTile: {fileID: 11400000, guid: 39434b3c63f1c594c843b33bd68e3a92, type: 2}
+  explosionCenter: {fileID: 7481616058974746871, guid: e8dee961f8b31a04e82145569578a4a1,
+    type: 3}
+  explosionLine: {fileID: 5995979184296199611, guid: f5ababd4b54593a489dcaa0b10b98b25,
+    type: 3}
+  test: {fileID: 4716987195224609749, guid: c7a6129bd47f37f4882252dcbd90ffa1, type: 3}
+  upgrades:
+  - {fileID: 4190292973747990213, guid: c619bf0a147b2c94c98fffbf77cf4744, type: 3}
+  - {fileID: 6173647323061614110, guid: bd7e1e9dbd240424aa3f86fcd97d4e46, type: 3}
+  - {fileID: 3286528890712925900, guid: bb56fbb0146a9254ca9043f3f75fe87e, type: 3}
+  - {fileID: 4904334480486831198, guid: c06c1ec2ae3fd894f9721300d0f87b10, type: 3}
+  - {fileID: 8592572965186444070, guid: 1dd70d0404a067f4ca7ff553577eaa01, type: 3}
+  droprate: 50
