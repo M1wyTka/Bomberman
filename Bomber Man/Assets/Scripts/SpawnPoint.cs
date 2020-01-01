@@ -5,13 +5,16 @@ using UnityEngine.Tilemaps;
 
 public class SpawnPoint : MonoBehaviour
 {
+    public static float delay = 0.02f;
+
     public int enterDirection = 0;
 
     public bool spawned = false;
 
     void Start()
     {
-        Invoke("SpawnRoom", 1f);
+        Invoke("SpawnRoom", delay);
+        delay += 0.02f;
     }
 
     private void SpawnRoom()
@@ -22,7 +25,6 @@ public class SpawnPoint : MonoBehaviour
             GameObject.Find("Level Generator").transform.GetComponent<LevelGenerator>().SpawnRoom(transform.position, enterDirection);
             AstarPath.active.UpdateGraphs(GameObject.Find("Tilemap_Walls").GetComponent<TilemapCollider2D>().bounds);
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,6 +34,7 @@ public class SpawnPoint : MonoBehaviour
             //Debug.Log(collision.name);
             Destroy(gameObject);
         }
+
         if (collision.CompareTag("Spawn Point") && !collision.transform.GetComponent<SpawnPoint>().spawned && !spawned)
         {
             spawned = true;
@@ -41,5 +44,4 @@ public class SpawnPoint : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
