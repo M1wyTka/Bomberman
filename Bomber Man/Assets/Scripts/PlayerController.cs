@@ -69,8 +69,6 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Vertical", move.y); 
     }
 
-    private void testFunc() { Debug.Log("asd"); }
-
     private void MoveCharacter(Vector2 move)
     {
         rb.MovePosition((Vector2)transform.position + move*Time.deltaTime);
