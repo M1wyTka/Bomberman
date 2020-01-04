@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1890199038694813098}
   - component: {fileID: 1890199038694813097}
   - component: {fileID: 2907630687904366084}
+  - component: {fileID: 8449894850574664627}
   m_Layer: 8
   m_Name: D
   m_TagString: Untagged
@@ -1024,6 +1025,7 @@ TilemapRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1065,6 +1067,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!156049354 &8449894850574664627
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890199038694813103}
+  m_Enabled: 1
+  m_CellSize: {x: 10, y: 10, z: 1}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
 --- !u!1001 &3031149259097015304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1072,11 +1086,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1890199038694813096}
     m_Modifications:
-    - target: {fileID: 7032176647663192566, guid: 960ec4ee13e274747b4ca38ad4bc79c6,
-        type: 3}
-      propertyPath: m_Name
-      value: Room Center
-      objectReference: {fileID: 0}
     - target: {fileID: 4939408135880055873, guid: 960ec4ee13e274747b4ca38ad4bc79c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1131,6 +1140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032176647663192566, guid: 960ec4ee13e274747b4ca38ad4bc79c6,
+        type: 3}
+      propertyPath: m_Name
+      value: Room Center
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 960ec4ee13e274747b4ca38ad4bc79c6, type: 3}
