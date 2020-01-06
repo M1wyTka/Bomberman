@@ -1023,6 +1023,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4188517323644839874, guid: 78626e3dd26d68344887f8d2aeb9ed28,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6249566507823235087, guid: 78626e3dd26d68344887f8d2aeb9ed28,
         type: 3}
       propertyPath: m_Layer
@@ -1031,12 +1036,12 @@ PrefabInstance:
     - target: {fileID: 6273683573318510501, guid: 78626e3dd26d68344887f8d2aeb9ed28,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6273683573318510501, guid: 78626e3dd26d68344887f8d2aeb9ed28,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78626e3dd26d68344887f8d2aeb9ed28, type: 3}
