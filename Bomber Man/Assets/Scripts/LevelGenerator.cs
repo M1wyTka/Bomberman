@@ -7,7 +7,6 @@ public class LevelGenerator : MonoBehaviour
 {
     public Tilemap mainTilemap;
     public GameObject entryCell;
-    public GameObject cameraTracker;
 
     public GameObject[] topRooms;
     public GameObject[] downRooms;
@@ -59,7 +58,6 @@ public class LevelGenerator : MonoBehaviour
                 mainTilemap.SetTile(mainTilemap.WorldToCell(sideTilePlace), sideTilemap.GetTile<Tile>(localPlace));
             }
         }
-        Instantiate(cameraTracker, position, Quaternion.identity);
         sideTilemap.ClearAllTiles();
     }
 }

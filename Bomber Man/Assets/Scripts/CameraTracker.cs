@@ -8,6 +8,8 @@ public class CameraTracker : MonoBehaviour
     public Vector3 cameraOffset = new Vector3(0, 0, -10);
     public float moveTime = 1f;
 
+    public GameObject mapIcon;
+
     private List<Collider2D> enemiesInside = new List<Collider2D>();
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +22,7 @@ public class CameraTracker : MonoBehaviour
             StartCoroutine(MoveToPosition(GameObject.Find("Main Camera").transform, this.transform.position + cameraOffset, moveTime));
             AstarPath.active.data.gridGraph.center = transform.position;
             AstarPath.active.Scan();
+            mapIcon.SetActive(true);
 
             foreach(Collider2D col in enemiesInside)
                 col.transform.GetComponent<AIPath>().canMove = true;
