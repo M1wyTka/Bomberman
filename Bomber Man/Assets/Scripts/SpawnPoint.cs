@@ -39,7 +39,6 @@ public class SpawnPoint : MonoBehaviour
         {
             spawned = true;
             LevelGenerator lvlGen = GameObject.Find("Level Generator").transform.GetComponent<LevelGenerator>();
-            Debug.Log(transform.position);
             lvlGen.SpawnRoom(transform.position, lvlGen.deadEnd);
             Destroy(gameObject);
         }
