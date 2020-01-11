@@ -70,3 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e2fe34d1c23cb4aaefd9be8f011cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOffset: {x: 0, y: 0, z: -10}
+  moveTime: 1
+  mapIcon: {fileID: 0}
+  upgradeIcon: {fileID: 1078614969453948391, guid: 23cb37b33b68ef2488fd22ceb41188da,
+    type: 3}

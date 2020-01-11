@@ -9,6 +9,7 @@ TagManager:
   - Spawn Point
   - Smart Enemy
   - Room Center
+  - Upgrade
   layers:
   - Default
   - TransparentFX

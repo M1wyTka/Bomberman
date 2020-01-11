@@ -10,6 +10,9 @@ public class CameraTracker : MonoBehaviour
 
     public GameObject mapIcon;
 
+    public GameObject upgradeIcon = null;
+    private bool upgradePresent = false;
+
     private List<Collider2D> enemiesInside = new List<Collider2D>();
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,9 +26,17 @@ public class CameraTracker : MonoBehaviour
             AstarPath.active.data.gridGraph.center = transform.position;
             AstarPath.active.Scan();
             mapIcon.SetActive(true);
+            upgradeIcon.SetActive(true);
 
-            foreach(Collider2D col in enemiesInside)
+            foreach (Collider2D col in enemiesInside)
                 col.transform.GetComponent<AIPath>().canMove = true;
+        }
+
+        if (collision.CompareTag("Upgrade") && !upgradePresent)
+        {
+            upgradeIcon = Instantiate(upgradeIcon, transform.position, Quaternion.identity) as GameObject;
+            upgradeIcon.SetActive(false);
+            upgradePresent = true;
         }
     }
 

@@ -21,7 +21,6 @@ public class Explosion : MonoBehaviour
         {
             collision.transform.GetComponent<Enemy>().TakeDamage(1);
         }
-        else { Debug.Log(collision.name); }
     }
 
     private IEnumerator Blast()
