@@ -10,6 +10,7 @@ TagManager:
   - Smart Enemy
   - Room Center
   - Upgrade
+  - Level Exit
   layers:
   - Default
   - TransparentFX
