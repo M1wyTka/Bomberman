@@ -12,7 +12,7 @@ public class CompassNeedle : MonoBehaviour
 
     void Start()
     {
-        Invoke("FindPoles", 1f);
+        Invoke("FindPoles", 5f);
     }
 
     private void FindPoles()
@@ -26,10 +26,10 @@ public class CompassNeedle : MonoBehaviour
     {
         if (isRotating)
         {
-            Vector3 rotation = (northPole.transform.position - southPole.transform.position);
-            float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-            transform.rotation = new Quaternion(0, 0, angle, 1);
+            Vector3 lookPos = (northPole.transform.position - southPole.transform.position);
+            var rotation = Quaternion.LookRotation(lookPos, Vector3.back) * Quaternion.Euler(90, 0, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.05f);
         }
-           
+        else transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(0, 0, 90), 0.05f);
     }
 }
