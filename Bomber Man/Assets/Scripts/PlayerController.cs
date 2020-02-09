@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    public bool isMovable = true;
     private Vector2 movement;
     private Vector2 SideForces = new Vector2(0, 0);
     private List<Vector2> Forces = new List<Vector2>();
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (joystick.Horizontal >= 0.2f || joystick.Horizontal <= -0.2f || joystick.Vertical >= 0.2f || joystick.Vertical <= -0.2f)
+        if ((joystick.Horizontal >= 0.2f || joystick.Horizontal <= -0.2f || joystick.Vertical >= 0.2f || joystick.Vertical <= -0.2f) && isMovable)
         {
             movement = new Vector2(joystick.Horizontal * moveSpeed, joystick.Vertical * moveSpeed);
         }
