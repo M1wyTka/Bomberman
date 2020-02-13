@@ -17,7 +17,7 @@ public class Explosion : MonoBehaviour
         {
             collision.transform.GetComponent<PlayerStats>().TakeDamage(1);
         }
-        else if (collision.CompareTag("Enemy"))
+        else if (collision.CompareTag("Enemy") || collision.CompareTag("Smart Enemy"))
         {
             collision.transform.GetComponent<Enemy>().TakeDamage(1);
         }

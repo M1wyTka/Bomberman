@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public GameObject deathEffect;
     private GameObject target;
 
+    private bool vunerable = true;
+
     public void Start()
     {
         if(transform.GetComponent<AIDestinationSetter>())
@@ -25,11 +27,27 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
-        {
-            Die();
+        if (vunerable) {
+            health -= damage;
+            if (health <= 0)
+            {
+                Die();
+            }
+            StartCoroutine(BecomeInvunerable(1));
         }
+    }
+
+    private IEnumerator BecomeInvunerable(float time)
+    {
+        vunerable = false;
+        for (int i = 0; i <= 10; i++)
+        {
+            transform.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(time / 20);
+            transform.GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(time / 20);
+        }
+        vunerable = true;
     }
 
     private void Die()
