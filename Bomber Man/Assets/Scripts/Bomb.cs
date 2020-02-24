@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class Bomb : MonoBehaviour
 {
+    public bool isPlayerBomb = true;
+
     public float timer = 3f;
     public int explosionDistance = 1;
 
@@ -17,7 +19,8 @@ public class Bomb : MonoBehaviour
     void Start()
     {
         mapManager = FindObjectOfType<MapManager>();
-        playerAbils = FindObjectOfType<PlayerAbilities>();
+        if (isPlayerBomb)
+            playerAbils = FindObjectOfType<PlayerAbilities>();
         startTime = Time.time;
     }
 
@@ -32,7 +35,8 @@ public class Bomb : MonoBehaviour
     private void Explode()
     {
         mapManager.Explode(transform.position, explosionDistance);
-        playerAbils.BombExploded();
+        if(isPlayerBomb)
+            playerAbils.BombExploded();
         Destroy(gameObject);
     }
 

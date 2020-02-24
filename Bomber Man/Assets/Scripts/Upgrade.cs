@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,12 +13,21 @@ public class Upgrade : MonoBehaviour
     [HideInInspector]
     public int arrayIdx = 0;
 
+    private UpgradeTracker upgradeTracker = null;
+
+    private void Start()
+    {
+        upgradeTracker = transform.GetComponentInParent<UpgradeTracker>();  
+    }   
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            Destroy(gameObject);
             ApplyEffect(other);
+            if (upgradeTracker != null)
+                upgradeTracker.UpgradeGone();
         }
     }
 
@@ -34,7 +44,6 @@ public class Upgrade : MonoBehaviour
             case ("Health Upgrade"): IncreaseHealth(player); break;
             default: Debug.Log("default state in upgrade"); break;
         }
-        Destroy(gameObject);
     }
 
     private void ReduceTimer(Collider2D player)
