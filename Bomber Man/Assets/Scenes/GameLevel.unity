@@ -275,6 +275,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5138310074479798801, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d9c70166dcbadf944877b3dd144d2381,
+        type: 3}
+    - target: {fileID: 5138310074479798801, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5138310074529212377, guid: d4508b010520e4643b74f8f2ffa4b17b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,10 +401,30 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 460
       objectReference: {fileID: 0}
+    - target: {fileID: 5660397707178993962, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660397707178993962, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6201766362002344814, guid: d4508b010520e4643b74f8f2ffa4b17b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795661088626714381, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -326.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795661088626714381, guid: d4508b010520e4643b74f8f2ffa4b17b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 8961440239407458275, guid: d4508b010520e4643b74f8f2ffa4b17b,
         type: 3}
@@ -513,6 +544,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6794115776590508348, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794115776590508348, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848907545398425072, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6848907545398425073, guid: 2244d2acd1a12254bbc155795970bfff,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -582,6 +628,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LvL Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056607483734251762, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: transactionTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882169698781229479, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882169698781229479, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882169698781229479, guid: 2244d2acd1a12254bbc155795970bfff,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2244d2acd1a12254bbc155795970bfff, type: 3}
@@ -1135,22 +1201,22 @@ Tilemap:
       e00: NaN
       e01: NaN
       e02: 1
-      e03: 1
+      e03: 0
       e10: NaN
       e11: NaN
-      e12: 0
-      e13: 1.8e-43
-      e20: 0
-      e21: 0
-      e22: 0
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 0
+      e12: 1
+      e13: 0
+      e20: -2.155576e-28
+      e21: 4.13e-43
+      e22: 1
+      e23: 8.339361e+14
+      e30: 4.5904e-41
+      e31: 9.46e-43
+      e32: 1
+      e33: 4.5912e-41
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -0.00015004561, g: -0.00015004561, b: -0.00015004561, a: -0.00015004561}
+    m_Data: {r: 1.0423687e+19, g: 1.0423687e+19, b: 1.0423687e+19, a: 1.0423687e+19}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -8, z: 0}
