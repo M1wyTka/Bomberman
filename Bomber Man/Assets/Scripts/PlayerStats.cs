@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
             StartCoroutine(PlayeHurtAnimation(0.5f));
             if (health <= 0)
             {
-                StartCoroutine(Die());
+                StartCoroutine(Die());            
             }
             StartCoroutine(BecomeInvunerable(2));
         }
@@ -64,6 +64,7 @@ public class PlayerStats : MonoBehaviour
         transform.GetComponent<PlayerController>().enabled = false;
         yield return new WaitForSeconds(1);
         Instantiate(dustPile, transform.position, Quaternion.identity);
+        GameMaster.Instance.LoseGame();
         Destroy(gameObject);
     }
 

@@ -55,8 +55,8 @@ public class LevelExit : MonoBehaviour
             elapsed += Time.deltaTime;
             foregroundImage.fillAmount = elapsed / transactionTime;
             yield return null;
-        } 
+        }
 
-        SceneManager.LoadScene(mainMenuScene.name);
+        GameMaster.Instance.LoseGame();
     }
 }

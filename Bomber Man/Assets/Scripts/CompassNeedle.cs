@@ -24,7 +24,7 @@ public class CompassNeedle : MonoBehaviour
 
     void Update()
     {
-        if (isRotating)
+        if (isRotating && (southPole != null) && (northPole != null))
         {
             Vector3 lookPos = (northPole.transform.position - southPole.transform.position);
             var rotation = Quaternion.LookRotation(lookPos, Vector3.back) * Quaternion.Euler(90, 0, 0);

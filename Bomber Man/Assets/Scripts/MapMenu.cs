@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MapMenu : MonoBehaviour
 {
-    private bool isPaused = false;
-
     private Vector3 initialTouch;
     private Vector3 currentTouch;
 
@@ -16,28 +14,21 @@ public class MapMenu : MonoBehaviour
         mapCamera = GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(0);
     }
 
-    public bool isGamePaused()
-    {
-        return isPaused;
-    }
-
     public void Resume()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
+        GameMaster.Instance.UnPauseGame();
     }
 
     public void Pause()
     {
         gameObject.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
+        GameMaster.Instance.PauseGame();
     }
 
     private void Update()
     {
-        if (isPaused && Input.touchCount > 0)
+        if (GameMaster.Instance.isPaused && Input.touchCount > 0)
         {
             mapCamera.position -= (Vector3)Input.GetTouch(0).deltaPosition;
         }
