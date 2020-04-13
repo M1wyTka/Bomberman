@@ -8,14 +8,14 @@ public class DumbEnemy : MonoBehaviour
 
     public float speed;
 
-    private Vector3 nextPos;
+    private protected Vector3 nextPos;
 
-    void Start()
+    protected virtual void Start()
     {
         nextPos = position_1.position;
     }
 
-    private void Move()
+    protected virtual void Move()
     {
         if (transform.position == nextPos)
         {
