@@ -5,19 +5,20 @@ using System;
 
 public class DumbEnemyV2 : DumbEnemy
 {
-    [SerializeField] private Transform[] route = null;
+    [SerializeField] private GameObject route = null;
     private Vector3[] milestones;
 
     protected override void Start()
     {
-        milestones = new Vector3[route.Length];
-
-        for(int i = 0; i < route.Length; i++)
+        int routeCount = route.transform.childCount;
+        milestones = new Vector3[routeCount];
+        
+        for(int i = 0; i < routeCount; i++)
         {
-            milestones[i] = route[i].position;
+            milestones[i] = route.transform.GetChild(i).position;
         }
 
-        if ((route != null) && (route.Length > 0))
+        if ((route != null) && (routeCount > 0))
         {
             nextPos = milestones[0];
         }

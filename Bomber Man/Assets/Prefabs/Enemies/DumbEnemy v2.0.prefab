@@ -238,9 +238,7 @@ MonoBehaviour:
   position_1: {fileID: 0}
   position_2: {fileID: 0}
   speed: 10
-  route:
-  - {fileID: 6905659891516558238}
-  - {fileID: 2419687828635725059}
+  route: {fileID: 966927935455921897}
 --- !u!1 &8517659371144792778
 GameObject:
   m_ObjectHideFlags: 0
