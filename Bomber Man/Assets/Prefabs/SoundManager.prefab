@@ -46,7 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 8300000, guid: d0b17f4fa04cb54449692072bb84d296, type: 3}
   Hurt: {fileID: 8300000, guid: fba02391827a31847a102a5223ad52e8, type: 3}
+  Upgrade: {fileID: 8300000, guid: 0634982ca3c31394fa9a922a4fc4a755, type: 3}
   PowerUp: {fileID: 8300000, guid: 0634982ca3c31394fa9a922a4fc4a755, type: 3}
+  Teleportation: {fileID: 8300000, guid: ec114d7334985364f9b4dc4437c099c8, type: 3}
+  Confirm: {fileID: 8300000, guid: d00d11ca5a389a54eab06fd5f84c33ff, type: 3}
 --- !u!82 &8083946801393045715
 AudioSource:
   m_ObjectHideFlags: 0

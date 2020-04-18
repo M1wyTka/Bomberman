@@ -41,12 +41,14 @@ public class GameMaster : MonoBehaviour
 
     public void RestartGame()
     {
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.Confirm);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         UnPauseGame();
     }
 
     public void GoToMainMenu()
     {
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.Confirm);
         SceneManager.LoadScene(mainMenuScene.name);
         UnPauseGame();
     }

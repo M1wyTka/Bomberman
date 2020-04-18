@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip Upgrade;
     public AudioClip PowerUp;
     public AudioClip Teleportation;
+    public AudioClip Confirm;
 
     private AudioSource soundEffectAudio;
 
