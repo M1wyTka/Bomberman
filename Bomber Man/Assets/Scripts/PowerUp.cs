@@ -19,6 +19,7 @@ public class PowerUp : MonoBehaviour
             //Instantiate(pickupEffect, transform.position, transform.rotation);
             if (GivePowerUp(other, PowerUpNames[arrayIdx], GetComponent<SpriteRenderer>().sprite))
             {
+                SoundManager.Instance.PlayOneShot(SoundManager.Instance.PowerUp);
                 Destroy(gameObject);
             }
         }
